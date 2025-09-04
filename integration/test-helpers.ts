@@ -1,4 +1,4 @@
-import { RabbitMQEventBus } from '../../rabbitmq-event-bus';
+import { RabbitMQEventBus } from '../src/rabbitmq-event-bus';
 import { EventProcessor, EventDispatcher, EventBase } from '@soapjs/soap';
 
 export interface TestEventSystem {

@@ -1,4 +1,4 @@
-import { RabbitMQEventBus } from '../rabbitmq-event-bus';
+import { RabbitMQEventBus } from '../src/rabbitmq-event-bus';
 import { EventProcessor, EventDispatcher, EventBase, ExternalEvent } from '@soapjs/soap';
 
 // Example usage of the RabbitMQ event system

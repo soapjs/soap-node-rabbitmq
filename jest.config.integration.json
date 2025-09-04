@@ -3,9 +3,9 @@
   "testEnvironment": "node",
   "clearMocks": true,
   "collectCoverage": false,
-  "testMatch": ["**/__tests__/integration/**/*.test.ts"],
+  "testMatch": ["**/integration/**/*.test.ts"],
   "testTimeout": 120000,
-  "setupFiles": ["<rootDir>/src/__tests__/integration/setup.ts"],
+  "setupFiles": ["<rootDir>/integration/setup.ts"],
   "testPathIgnorePatterns": ["/node_modules/", "/build/", "/reference/"],
   "verbose": true,
   "globals": {

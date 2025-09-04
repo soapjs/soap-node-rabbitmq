@@ -1,6 +1,7 @@
 import { spawn } from 'child_process';
 import { GenericContainer, StartedTestContainer, Wait } from 'testcontainers';
 import path from 'path';
+import { readdirSync } from 'fs';
 
 let rabbitMQContainer: StartedTestContainer;
 let connectionUrl: string;
@@ -71,13 +72,7 @@ async function runTestFile(testFile: string): Promise<boolean> {
 }
 
 async function runAllIntegrationTests(): Promise<void> {
-  const testFiles = [
-    'simple.integration.test.ts',
-    'rabbitmq-event-bus.integration.test.ts',
-    'event-processor.integration.test.ts',
-    'event-dispatcher.integration.test.ts',
-    'event-system.integration.test.ts'
-  ];
+  const testFiles = readdirSync(path.join(__dirname, '..', 'integration')).filter(file => file.endsWith('.test.ts'));
 
   try {
     // Setup RabbitMQ container

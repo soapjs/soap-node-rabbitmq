@@ -1,5 +1,5 @@
 import { setupIntegrationTests, teardownIntegrationTests } from './setup';
-import { RabbitMQEventBus } from '../../rabbitmq-event-bus';
+import { RabbitMQEventBus } from '../src/rabbitmq-event-bus';
 
 describe('Simple Integration Test', () => {
   let connectionUrl: string;
